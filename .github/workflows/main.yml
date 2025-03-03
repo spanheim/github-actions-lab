@@ -26,6 +26,9 @@ jobs:
       - name: Configure Docker
         run: gcloud auth configure-docker gcr.io
 
+      - name: Configure Docker for Google Artifact Registry
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
+
       - name: Build and push Docker image
         run: |
          docker build -t us-central1-docker.pkg.dev/github-actions-451710/gcr-repo/gcp-app:latest .
