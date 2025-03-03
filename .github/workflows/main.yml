@@ -24,7 +24,7 @@ jobs:
           project_id: github-actions-451710
 
       - name: Configure Docker
-        run: gcloud auth configure-docker
+        run: gcloud auth configure-docker gcr.io
 
       - name: Build and push Docker image
         run: |
